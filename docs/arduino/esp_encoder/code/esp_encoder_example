@@ -1,0 +1,22 @@
+#include <Arduino.h>
+#include "esp_encoder.h"
+
+ENCODER encoder;
+ESWITCH esw;
+
+void attachtask()
+{
+  encoder_scan(&encoder);
+}
+
+void setup() {
+    encoder_begin(&encoder,32,33);
+    encoder_sw_begin(&esw,25);
+
+    attachInterrupt(digitalPinToInterrupt(encoder.CLK), attachtask, CHANGE);
+}
+
+void loop() {
+    encoder_scan_sw(&esw);
+  // put your main code here, to run repeatedly:
+}

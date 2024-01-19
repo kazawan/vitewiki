@@ -1,0 +1,8 @@
+
+
+#VPContent > div > div.VPHero.VPHomeHero > div > div > p.text{
+    font-size: 2rem !important;
+    background-image: linear-gradient(to right, orange, purple) !important;
+    -webkit-background-clip: text;
+    color: transparent !important;
+  }
