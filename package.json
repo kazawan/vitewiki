@@ -8,12 +8,10 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs ",
     "docs:preview": "vitepress preview docs",
-    "gitpush":"git add . && git commit -m 'update' && git push origin main",
-    "gitpull":"git pull origin main",
-    "deploy":"vitepress build docs &&  scp -r dist ubuntu@114.132.41.210:~/vpwiki",
-    "copy":"scp -r dist ubuntu@114.132.41.210:~/vpwiki"
-
-    
+    "gitpush": "git add . && git commit -m 'update' && git push origin main",
+    "gitpull": "git pull origin main",
+    "deploy": "vitepress build docs &&  scp -r dist ubuntu@114.132.41.210:~/vpwiki",
+    "copy": "scp -r dist ubuntu@114.132.41.210:~/vpwiki"
   },
   "keywords": [],
   "author": "",
