@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: "🉐卡泽湾爬坑记©️"
-  text: "web app / arduino / linux"
-  tagline: 自用笔记
+  text: "web app / arduino / linux..."
+  tagline: 🙉自用笔记 自用笔记
   
   # actions:
   #   - theme: brand
