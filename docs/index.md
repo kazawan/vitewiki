@@ -9,7 +9,7 @@ hero:
   
   actions:
     - theme: alt
-      text: 😃写文档用Emoji
+      text: 😃写文档用Emoji...
       link: https://emojixd.com/group/symbols
   #   - theme: brand
   #     text: web开发

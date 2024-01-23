@@ -11,6 +11,7 @@
     "gitpush": "git add . && git commit -m 'update' && git push origin main",
     "gitpull": "git pull origin main",
     "deploy": "vitepress build docs &&  scp -r dist ubuntu@114.132.41.210:~/vpwiki",
+    "deployecs": "vitepress build docs &&  scp -r dist ecs-user@39.100.69.209:~/vpwiki",
     "copy": "scp -r dist ubuntu@114.132.41.210:~/vpwiki"
   },
   "keywords": [],

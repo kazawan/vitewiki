@@ -94,3 +94,9 @@ export default defineConfig({
   },
 });
 ```
+
+::: info PM2 启动命令
+```
+pm2 serve . --name vpwiki --port <port> --basic-auth-username <username> --basic-auth-password <password>
+```
+:::
