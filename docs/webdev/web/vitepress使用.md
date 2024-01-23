@@ -45,9 +45,9 @@ export default DefaultTheme;
 ```
 
 style.css
-chrome浏览器`F12`打开查看css路径
-```css
+chrome 浏览器`F12`打开查看 css 路径
 
+```css
 #VPContent > div > div.VPHero.VPHomeHero > div > div > p.text {
   font-size: 2rem !important;
   background-image: linear-gradient(to right, orange, purple) !important;
@@ -58,6 +58,39 @@ chrome浏览器`F12`打开查看css路径
 
 ## 🟡Auto SideBar 插件使用
 
-未完..
+::: info GITHUB 项目地址
+[https://github.com/QC2168/vite-plugin-vitepress-auto-sidebar](https://github.com/QC2168/vite-plugin-vitepress-auto-sidebar)
+:::
 
+### 安装
 
+```sh
+npm install vite-plugin-vitepress-auto-sidebar
+```
+
+:::warning
+如果弹出错误.根据错误修改 如 --force
+:::
+
+### 添加插件到 config.js
+
+`/docs/.vitepress/config.mjs`
+
+```js
+import AutoSidebar from "vite-plugin-vitepress-auto-sidebar";
+
+export default defineConfig({
+  vite: {
+    plugins: [
+      // add plugin
+      AutoSidebar({
+        //我的配置
+        ignoreList: ["code", "img"],//忽略目录
+        ignoreIndexItem: true,//忽略index.md
+        titleFromFile: true,//從md檔案讀取標題
+        collapsed: true,//折叠
+      }),
+    ],
+  },
+});
+```

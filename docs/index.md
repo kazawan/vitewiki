@@ -5,12 +5,12 @@ layout: home
 hero:
   name: "🉐卡泽湾爬坑记©️"
   text: "web app / arduino / linux..."
-  tagline: 🙉自用笔记 自用笔记
+  tagline: 🙉自用笔记
   
-  # actions:
-  #   - theme: brand
-  #     text: Arduino
-  #     link: /arduino/
+  actions:
+    - theme: alt
+      text: 😃写文档用Emoji
+      link: https://emojixd.com/group/symbols
   #   - theme: brand
   #     text: web开发
   #     link: /webdev/
