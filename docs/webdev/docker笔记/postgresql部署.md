@@ -1,10 +1,10 @@
 # 🗒️PostgreSql docker 部署
 
-[⚙️拉取镜像](#⚙️拉取镜像)
-[🛠️docker-compose.yml](#🛠️docker-composeyml)
-[🔫启动](#🔫启动)
-[🔭postgresql 备份](#🔭postgresql-备份)
-[🔭postgresql 恢复](#🔭postgresql-恢复)
+[⚙️拉取镜像](#⚙️拉取镜像)   
+[🛠️docker-compose.yml](#🛠️docker-composeyml)    
+[🔫启动](#🔫启动)   
+[🔭postgresql 备份](#🔭postgresql-备份)   
+[🔭postgresql 恢复](#🔭postgresql-恢复)   
 
 ## ⚙️拉取镜像
 ```sh
