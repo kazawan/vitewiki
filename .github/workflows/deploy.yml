@@ -15,5 +15,4 @@ jobs:
         with:
           node-version: 16.x # 指定版本
           cache: 'npm'
-      - run: cd dist
-      - run: ls -a
+      - run: ls -a dist
