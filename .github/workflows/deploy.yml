@@ -25,4 +25,4 @@ jobs:
           port: ${{ secrets.PORT }}
           # script: ls -a
           source: 'dist/'
-          target: '/home/ecs-user/vpwiki/dist'      
+          target: '/home/ecs-user/vpwiki/'      
