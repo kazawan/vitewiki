@@ -3,7 +3,9 @@ name: Deploy
 on:
   push:
     branches: [main]
-
+    paths-ignore:
+      - '.gitignore'
+      - 'package.json'
 jobs:
   build:
     runs-on: ubuntu-latest
