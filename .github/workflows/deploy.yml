@@ -1,0 +1,20 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@main # git 克隆到当前机器上
+      - name: Use Node.js
+        uses: actions/setup-node@v3 # 设置node环境
+        with:
+          node-version: 16.x # 指定版本
+
+      - run: npm # 运行 npm
+      - run: npm build # 运行 npm build
+      - run: ls -a # 查看打包后的目录文件
