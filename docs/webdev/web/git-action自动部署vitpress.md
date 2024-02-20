@@ -1,0 +1,36 @@
+# git-action 自动部署 vitpress 到 ecs服务器
+
+
+## 脚本
+
+````yml
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@main # git 克隆到当前机器上
+      - name: Use Node.js
+        uses: actions/setup-node@v3 # 设置node环境
+        with:
+          node-version: 16.x # 指定版本
+          cache: 'npm'
+      - run: ls -a dist
+      - name: Deploy
+        uses: appleboy/scp-action@master # 使用ssh链接服务器
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          # script: ls -a
+          source: 'dist/'
+          target: '/home/ecs-user/vpwiki/dist'
+    
+```
