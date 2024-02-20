@@ -15,6 +15,6 @@ jobs:
         with:
           node-version: 16.x # 指定版本
 
-      - run: npm # 运行 npm
+      - run: npm install  # 运行 npm
       - run: npm build # 运行 npm build
       - run: ls -a # 查看打包后的目录文件
