@@ -15,7 +15,5 @@ jobs:
         with:
           node-version: 16.x # 指定版本
           cache: 'npm'
-      - run: chmod +x ./install.sh
-      - run: ./install.sh
-      - run: npm build # 运行 npm build
-      - run: ls -a # 查看打包后的目录文件
+      - run: cd dist
+      - run: ls -a

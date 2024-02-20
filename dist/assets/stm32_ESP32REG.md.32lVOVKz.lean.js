@@ -1,0 +1,1 @@
+import{_ as s,c as n,o as a,V as p}from"./chunks/framework.6DK9nIBo.js";const h=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"stm32/ESP32REG.md","filePath":"stm32/ESP32REG.md"}'),l={name:"stm32/ESP32REG.md"},e=p("",5),i=[e];function t(c,o,r,u,_,d){return a(),n("div",null,i)}const P=s(l,[["render",t]]);export{h as __pageData,P as default};
