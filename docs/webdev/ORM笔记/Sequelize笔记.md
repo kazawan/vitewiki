@@ -57,12 +57,20 @@ try {
 
 
 ## sqlit连接
+```js
+const { Sequelize, Op, Model, DataTypes } = require("sequelize");
+const sequelize = new Sequelize("sqlite::DataBase.sqlite:");
+```
 
 ## postgresql连接
+```js
+const { Sequelize, Op, Model, DataTypes } = require("sequelize");
+const sequelize = new Sequelize('postgres://user:pass@example.com:5432/dbname') 
+```
 
-## 数据库模型
+## 关闭数据库
+```js
+sequelize.close()
+```
 
-## 关联表
-
-## 常用CURD
 
