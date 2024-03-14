@@ -1,9 +1,9 @@
 # 🈴React 笔记
 
 - [ 目录 ]
-  [🈵React 状态管理 `useState()`](#🈵react-状态管理-usestate)      
-  [🔰 组件 Props 传递 `数据` 和 `方法` ](#🔰组件props-传递-数据-和-方法)     
-  [💱 元素 `"for"` 循环](#💱-元素-for-循环)      
+  - [🈵React 状态管理 `useState()`](#🈵react-状态管理-usestate)      
+  - [🔰 组件 Props 传递 `数据` 和 `方法` ](#🔰组件props-传递-数据-和-方法)     
+  - [💱 元素 `"for"` 循环](#💱-元素-for-循环)      
 
 
 
