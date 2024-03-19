@@ -11,6 +11,9 @@ hero:
     - theme: alt
       text: 😃写文档用Emoji...
       link: https://emojixd.com/group/symbols
+    - theme: alt
+      text: 🧇Svg Icon 库
+      link: https://icon-sets.iconify.design/
   #   - theme: brand
   #     text: web开发
   #     link: /webdev/
@@ -32,4 +35,3 @@ features:
     details: STM32 cubeMX 学习笔记
     link: /stm32/
 ---
-
