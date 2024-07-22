@@ -155,7 +155,7 @@ void hardware_btn_init(HardwareBtn_t *btn,int pin)
 ```
 
 ## `button.h`
-```h
+```c
 #ifndef BUTTON_H
 #define BUTTON_H
 

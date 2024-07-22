@@ -1,4 +1,4 @@
-import{_ as s,c as i,o as a,V as n}from"./chunks/framework.6DK9nIBo.js";const c=JSON.parse('{"title":"测试简易移植按键库","description":"","frontmatter":{},"headers":[],"relativePath":"arduino/通用硬件HAL接口驱动/HAL_按钮驱动.md","filePath":"arduino/通用硬件HAL接口驱动/HAL_按钮驱动.md"}'),p={name:"arduino/通用硬件HAL接口驱动/HAL_按钮驱动.md"},l=n(`<h1 id="测试简易移植按键库" tabindex="-1">测试简易移植按键库 <a class="header-anchor" href="#测试简易移植按键库" aria-label="Permalink to &quot;测试简易移植按键库&quot;">​</a></h1><div class="tip custom-block"><p class="custom-block-title">地址</p><p><a href="https://github.com/kazawan/kaza_hal_button_driver" target="_blank" rel="noreferrer">测试简易移植按键库</a></p></div><p>增加适配STM32 HAL</p><p>暂时只适配 arduino esp32</p><h2 id="配置管脚-api" tabindex="-1">配置管脚 api <a class="header-anchor" href="#配置管脚-api" aria-label="Permalink to &quot;配置管脚 api&quot;">​</a></h2><p>生成<code>button_config.h</code></p><div class="language-c vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">c</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#include</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;button.h&quot;</span></span>
+import{_ as s,c as i,o as a,V as n}from"./chunks/framework.6DK9nIBo.js";const F=JSON.parse('{"title":"测试简易移植按键库","description":"","frontmatter":{},"headers":[],"relativePath":"arduino/通用硬件HAL接口驱动/HAL_按钮驱动.md","filePath":"arduino/通用硬件HAL接口驱动/HAL_按钮驱动.md"}'),h={name:"arduino/通用硬件HAL接口驱动/HAL_按钮驱动.md"},k=n(`<h1 id="测试简易移植按键库" tabindex="-1">测试简易移植按键库 <a class="header-anchor" href="#测试简易移植按键库" aria-label="Permalink to &quot;测试简易移植按键库&quot;">​</a></h1><div class="tip custom-block"><p class="custom-block-title">地址</p><p><a href="https://github.com/kazawan/kaza_hal_button_driver" target="_blank" rel="noreferrer">测试简易移植按键库</a></p></div><p>增加适配STM32 HAL</p><p>暂时只适配 arduino esp32</p><h2 id="配置管脚-api" tabindex="-1">配置管脚 api <a class="header-anchor" href="#配置管脚-api" aria-label="Permalink to &quot;配置管脚 api&quot;">​</a></h2><p>生成<code>button_config.h</code></p><div class="language-c vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">c</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#include</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;button.h&quot;</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">  btn_init</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">int</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;"> pin</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
@@ -93,83 +93,83 @@ import{_ as s,c as i,o as a,V as n}from"./chunks/framework.6DK9nIBo.js";const c=
 <span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    #endif</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div><h2 id="使用-1" tabindex="-1">使用 <a class="header-anchor" href="#使用-1" aria-label="Permalink to &quot;使用&quot;">​</a></h2><div class="language-c vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">c</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">  button_scan</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">&amp;</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">btn1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">  button_process</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">&amp;</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">btn1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span></code></pre></div><h2 id="button-h" tabindex="-1"><code>button.h</code> <a class="header-anchor" href="#button-h" aria-label="Permalink to &quot;\`button.h\`&quot;">​</a></h2><div class="language-h vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">h</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span>#ifndef BUTTON_H</span></span>
-<span class="line"><span>#define BUTTON_H</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>//! 选择模式 here  </span></span>
-<span class="line"><span>// STM32 使用cubuxMX 不用配置init方法</span></span>
-<span class="line"><span>// Arduino 使用Arduino.h</span></span>
-<span class="line"><span>// ESP32 配置 driver/gpio.h</span></span>
-<span class="line"><span>// 选择模式</span></span>
-<span class="line"><span>#define useArduino 1    </span></span>
-<span class="line"><span>#define useSTM32 0 </span></span>
-<span class="line"><span>#define useESP32 1</span></span>
-<span class="line"><span>//! Include here</span></span>
-<span class="line"><span>#if useArduino  </span></span>
-<span class="line"><span>#include &lt;Arduino.h&gt;</span></span>
-<span class="line"><span>#endif</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>#if useSTM32</span></span>
-<span class="line"><span>#include &quot;stm32f1xx_hal.h&quot;</span></span>
-<span class="line"><span>#endif</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>#if useESP32</span></span>
-<span class="line"><span>#include &quot;driver/gpio.h&quot;</span></span>
-<span class="line"><span>#endif</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span></span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>// enum KEY_STATE</span></span>
-<span class="line"><span>enum</span></span>
-<span class="line"><span>{</span></span>
-<span class="line"><span>    IDLE = 0,</span></span>
-<span class="line"><span>    PRESS,</span></span>
-<span class="line"><span>    RELEASE,</span></span>
-<span class="line"><span>    LONG_RELEASE</span></span>
-<span class="line"><span>}KEY_STATE;</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span></span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>typedef struct </span></span>
-<span class="line"><span>{</span></span>
-<span class="line"><span>    void (*init)(int pin);</span></span>
-<span class="line"><span>    #if useSTM32 </span></span>
-<span class="line"><span>        int (*read)(GPIO_TypeDef PROT ,uint16_t gpio_pin);</span></span>
-<span class="line"><span>    #endif</span></span>
-<span class="line"><span>    #if useESP32 </span></span>
-<span class="line"><span>        int (*read)(int pin);</span></span>
-<span class="line"><span>    </span></span>
-<span class="line"><span>    #endif</span></span>
-<span class="line"><span>    // int (*read)(int pin);</span></span>
-<span class="line"><span>    int (*Get_millis)(void);</span></span>
-<span class="line"><span>    int PIN;</span></span>
-<span class="line"><span>    int KEY_UP;</span></span>
-<span class="line"><span>    int CURRENT_TIME;// 按下时定时器</span></span>
-<span class="line"><span>    int PRESS_DEBOUNCE_TIME; // 按下去抖时间</span></span>
-<span class="line"><span>    int RELEASE_CURRENT_TIME;    // 抬起时定时器</span></span>
-<span class="line"><span>    int LONG_RELEASE_TIME;    // 长按时长</span></span>
-<span class="line"><span>    bool HAVE_LONG_PRESS;</span></span>
-<span class="line"><span>    int BUTTON_STATE;</span></span>
-<span class="line"><span>   </span></span>
-<span class="line"><span>}HardwareBtn_t;</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>#ifdef __cplusplus</span></span>
-<span class="line"><span>extern &quot;C&quot; {</span></span>
-<span class="line"><span>#endif</span></span>
-<span class="line"><span>void hardware_btn_init(HardwareBtn_t *btn,int pin);</span></span>
-<span class="line"><span>void button_scan(HardwareBtn_t *btn);   // 按键扫描</span></span>
-<span class="line"><span>void button_process(HardwareBtn_t *btn);    // 按键处理逻辑</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span></span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>#ifdef __cplusplus</span></span>
-<span class="line"><span>}</span></span>
-<span class="line"><span>#endif</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>#endif // BUTTON_H</span></span></code></pre></div><h2 id="button-cpp" tabindex="-1"><code>button.cpp</code> <a class="header-anchor" href="#button-cpp" aria-label="Permalink to &quot;\`button.cpp\`&quot;">​</a></h2><div class="language-cpp vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">cpp</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#include</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;button.h&quot;</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">  button_process</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">&amp;</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">btn1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span></code></pre></div><h2 id="button-h" tabindex="-1"><code>button.h</code> <a class="header-anchor" href="#button-h" aria-label="Permalink to &quot;\`button.h\`&quot;">​</a></h2><div class="language-c vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">c</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#ifndef</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> BUTTON_H</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#define</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> BUTTON_H</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">//! 选择模式 here  </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// STM32 使用cubuxMX 不用配置init方法</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// Arduino 使用Arduino.h</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// ESP32 配置 driver/gpio.h</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 选择模式</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#define</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> useArduino</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    </span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#define</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> useSTM32</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#define</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> useESP32</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 1</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">//! Include here</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#if</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> useArduino</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  </span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#include</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &lt;Arduino.h&gt;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#endif</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#if</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> useSTM32</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#include</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;stm32f1xx_hal.h&quot;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#endif</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#if</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> useESP32</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#include</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;driver/gpio.h&quot;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#endif</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// enum KEY_STATE</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">enum</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    IDLE </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    PRESS,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    RELEASE,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    LONG_RELEASE</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}KEY_STATE;</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">typedef</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> struct</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    void</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">init)(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> pin);</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    #if</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> useSTM32</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">        int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">read)(GPIO_TypeDef PROT ,</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">uint16_t</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> gpio_pin);</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    #endif</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    #if</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> useESP32</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">        int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">read)(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> pin);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    </span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    #endif</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // int (*read)(int pin);</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Get_millis)(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">void</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> PIN;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> KEY_UP;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> CURRENT_TIME;</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 按下时定时器</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> PRESS_DEBOUNCE_TIME;</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> // 按下去抖时间</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> RELEASE_CURRENT_TIME;</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // 抬起时定时器</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> LONG_RELEASE_TIME;</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // 长按时长</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    bool</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> HAVE_LONG_PRESS;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> BUTTON_STATE;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">HardwareBtn_t</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#ifdef</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> __cplusplus</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">extern</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;C&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#endif</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> hardware_btn_init</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">HardwareBtn_t</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> *</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">btn</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">int</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;"> pin</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> button_scan</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">HardwareBtn_t</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> *</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">btn</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">   // 按键扫描</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> button_process</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">HardwareBtn_t</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> *</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">btn</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // 按键处理逻辑</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#ifdef</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> __cplusplus</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#endif</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#endif</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"> // BUTTON_H</span></span></code></pre></div><h2 id="button-cpp" tabindex="-1"><code>button.cpp</code> <a class="header-anchor" href="#button-cpp" aria-label="Permalink to &quot;\`button.cpp\`&quot;">​</a></h2><div class="language-cpp vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">cpp</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">#include</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;button.h&quot;</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> button_scan</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">HardwareBtn_t</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> *</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">btn</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
@@ -205,4 +205,4 @@ import{_ as s,c as i,o as a,V as n}from"./chunks/framework.6DK9nIBo.js";const c=
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        }</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div>`,25),h=[l];function t(k,E,e,d,r,g){return a(),i("div",null,h)}const F=s(p,[["render",t]]);export{c as __pageData,F as default};
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div>`,25),p=[k];function l(t,E,e,d,r,g){return a(),i("div",null,p)}const c=s(h,[["render",l]]);export{F as __pageData,c as default};
