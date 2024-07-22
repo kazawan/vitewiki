@@ -154,6 +154,11 @@ void btnrelease(int pin);
 
 `BTN.cpp`
 
+::: warning 
+此处函数和结构体有缺失 
+请参考 [kaza_hal_button_driver/blob/main/button.cpp](https://github.com/kazawan/kaza_hal_button_driver/blob/main/button.cpp)
+:::
+
 ```cpp
 #include "btn.h"
 
