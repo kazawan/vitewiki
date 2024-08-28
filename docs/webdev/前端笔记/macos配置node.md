@@ -6,10 +6,11 @@
 :::
 
 ## 安装git
-：：： tip
+::: tip
 ```sh
 brew install git
 ```
+:::
 
 ## 安装vscode
 
@@ -18,7 +19,7 @@ brew install git
 
 ## 安装nodejs
 
-：：： tip 官网
+::: tip 官网
 [nodejs](https://nodejs.org/zh-cn)
 :::
 
