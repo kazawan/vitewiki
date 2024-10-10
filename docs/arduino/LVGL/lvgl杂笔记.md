@@ -89,3 +89,35 @@ enum {
 };
 typedef uint8_t lv_scroll_snap_t;
 ```
+
+
+## 组焦点应用
+
+关键词 : `group` `focus` `焦点` `组` `lv_group_t`
+
+组件分在一个组并只能有一个焦点
+
+创建组
+```c
+// group
+    lv_group_t * btn_group = lv_group_create();
+```
+
+添加组件到组
+```c
+    lv_group_add_obj(btn_group, btn1);
+    lv_group_add_obj(btn_group, btn2);
+    lv_group_add_obj(btn_group, btn3);
+    lv_group_add_obj(btn_group, btn4);
+    lv_group_add_obj(btn_group, btn5);
+    lv_group_add_obj(btn_group, btn6);
+```
+
+自动焦点到某元素
+
+```c
+    lv_group_focus_obj(btn3);
+```
+
+
+
