@@ -1,12 +1,14 @@
-# lvgl笔记
+# lvgl 笔记
 
 ::: tip
 各种无法归类但又难以记住的点,做个笔记
 :::
 
-## lvgl颜色
+## lvgl 颜色
 
-`lv_palette_main` 
+关键词 : `lvgl颜色` `lv_color_t` `lv color`
+
+`lv_palette_main`
 
 ```c
 typedef enum {
@@ -33,17 +35,57 @@ typedef enum {
     LV_PALETTE_NONE = 0xff,
 }lv_palette_t;
 ```
+
 example:
+
 ```c
 lv_style_set_bg_color(&obj, lv_palette_main(LV_PALETTE_RED));
 ```
 
 `lv_color_hex`
 example:
+
 ```c
 lv_style_set_bg_color(&obj, lv_color_hex(0x00ff00)); // 绿色
 ```
 
+## 禁止滑动条出现
+
+`lv_obj_set_scrollbar_mode`
+
+关键词 : `禁止` `滑动` `scrollbar` `bar` `disable`
 
 
+```c
+    lv_obj_set_scrollbar_mode(scr, LV_SCROLLBAR_MODE_OFF);
+```
+种类:
+```c
+enum {
+    LV_SCROLLBAR_MODE_OFF,      /**< Never show scrollbars*/
+    LV_SCROLLBAR_MODE_ON,       /**< Always show scrollbars*/
+    LV_SCROLLBAR_MODE_ACTIVE,   /**< Show scroll bars when object is being scrolled*/
+    LV_SCROLLBAR_MODE_AUTO,     /**< Show scroll bars when the content is large enough to be scrolled*/
+};
+typedef uint8_t lv_scrollbar_mode_t;
+```
 
+## 滑动条自动对齐中间
+
+关键词 : `scroll` `bar` `snap` `对齐` `center` `align`
+
+`lv_obj_set_scroll_snap_y`
+
+```c
+    lv_obj_set_scroll_snap_y(list, LV_SCROLL_SNAP_CENTER);
+```
+种类:
+```c
+enum {
+    LV_SCROLL_SNAP_NONE,    /**< Do not align, leave where it is*/
+    LV_SCROLL_SNAP_START,   /**< Align to to the left/top*/
+    LV_SCROLL_SNAP_END,     /**< Align to to the right/bottom*/
+    LV_SCROLL_SNAP_CENTER   /**< Align to to the center*/
+};
+typedef uint8_t lv_scroll_snap_t;
+```
