@@ -119,5 +119,30 @@ typedef uint8_t lv_scroll_snap_t;
     lv_group_focus_obj(btn3);
 ```
 
+## 动画方法
+
+```c
+lv_anim_t a; // 动画变量
+lv_anim_init(&a); // 初始化动画变量
+lv_anim_set_var(&a, obj); // 设置那个对象使用动画
+lv_anim_set_time(&a, 50); // 设置动画时间
+lv_anim_set_delay(&a, 0); // 设置动画延迟
+lv_anim_set_path_cb(&a, lv_anim_path_ease_in_out); // 设置动画播放动效曲线
+lv_anim_set_repeat_count(&a, 1); // 设置动画重复次数
+lv_anim_set_playback_time(&a, 50); // 设置动画返回播放时间
+lv_anim_set_playback_delay(&a, 0); // 设置动画返回播放延迟
+
+lv_anim_set_exec_cb(&a, (lv_anim_exec_xcb_t)lv_obj_set_width); // 设置动画改变对象的参数 可以是x y width height 等
+lv_anim_set_values(&a, x, x+10); // 设置动画执行值 开始值 结束值
+
+
+// 开始动画
+lv_anim_start(&a);
+```
+
+`lv_anim_set_exec_cb` 对应一个 `lv_anim_t` 对象       
+`lv_anim_set_ready_cb` 可以在动画结束时执行一个函数
+
+
 
 
