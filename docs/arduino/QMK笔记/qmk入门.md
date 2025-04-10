@@ -69,6 +69,43 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 ```
 
+## Magic boot key
+
+> `keyboard.json` 打开 `bootmagic` 功能
+```json
+
+"features": {
+        "bootmagic": true, // [!code focus]
+        // optinos...
+},
+```    
+
+> `keymap.c` 中添加按键 `QK_BOOT`
+
+```c
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+    /*
+     * ┌───┬───┬───┬───┐
+     * │ 7 │ 8 │ 9 │   │
+     * ├───┼───┼───┤ + │
+     * │ 4 │ 5 │ 6 │   │
+     * ├───┼───┼───┼───┤
+     * │ 1 │ 2 │ 3 │   │
+     * ├───┴───┼───┤Ent│
+     * │   0   │ . │   │
+     * └───────┴───┴───┘
+     */
+    [_QWERTY] = LAYOUT_numpad_4x4(
+        QK_BOOT,   QK_RBT,   KC_P9,   KC_PMNS, // [!code focus]
+        KC_P4,   KC_P5,   KC_P6,   KC_PPLS,
+        KC_P1,   KC_P2,   KC_P3,   KC_PENT,
+        KC_P0,   KC_PDOT, KC_P9
+    )
+};
+```
+
+
+
 
 
 
